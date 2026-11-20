@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fidelity Position Copier</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Positions</h1>
+        <p id="status">Open a Fidelity positions page, then extract.</p>
+      </header>
+
+      <section class="actions" aria-label="Snapshot actions">
+        <button id="extractButton" type="button">Extract</button>
+        <button id="copyBriefButton" type="button" disabled>Copy Brief</button>
+        <button id="copyCleanButton" type="button" disabled>Copy Clean</button>
+        <button id="copyButton" type="button" disabled>Copy JSON</button>
+        <button id="downloadJsonButton" type="button" disabled>JSON</button>
+        <button id="downloadCsvButton" type="button" disabled>CSV</button>
+      </section>
+
+      <section class="summary" aria-label="Latest snapshot summary">
+        <div>
+          <span class="label">Stocks</span>
+          <strong id="stockCount">0</strong>
+        </div>
+        <div>
+          <span class="label">Options</span>
+          <strong id="optionCount">0</strong>
+        </div>
+        <div>
+          <span class="label">Other</span>
+          <strong id="otherCount">0</strong>
+        </div>
+      </section>
+
+      <section>
+        <label for="snapshotPreview">Latest snapshot</label>
+        <textarea id="snapshotPreview" readonly spellcheck="false"></textarea>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

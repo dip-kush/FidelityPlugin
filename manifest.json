@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Fidelity Position Copier",
+  "version": "0.1.0",
+  "description": "Extract Fidelity positions into local daily snapshots for copy and export.",
+  "permissions": ["activeTab", "storage", "clipboardWrite"],
+  "host_permissions": ["https://*.fidelity.com/*"],
+  "action": {
+    "default_title": "Fidelity Position Copier",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.fidelity.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
